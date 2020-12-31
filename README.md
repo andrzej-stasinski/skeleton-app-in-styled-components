@@ -6,7 +6,10 @@
 #### App development
 * HTML & CSS structure with styled-components
 
-
+#### Installation
+* npm install --save styled-components
+* npm install --save styled-normalize
+* or installation from package,json - npm install
 
 
 

@@ -12,6 +12,10 @@ import { normalize } from 'styled-normalize'
 
 const GlobalStyles = createGlobalStyle`
   ${normalize}
+  body {
+    font-family: sans-serif;
+    font-size: 1.2em;
+  }
   ul {
     list-style: none;
     margin: 0;
@@ -20,6 +24,10 @@ const GlobalStyles = createGlobalStyle`
 `
 
 function App() {
+  const options = [
+    {content: 'Ala'},
+    {content: 'Ola'},
+  ]
     return (
 
       <ThemeProvider theme={theme}>
@@ -27,8 +35,7 @@ function App() {
         <Wrapper>
           <Header>Header</Header>
           <Main>
-            <Aside>
-              Aside
+            <Aside items={options}>
               {/* <div>
                 <h2>Navigation</h2>
                 <nav class="navigation">
