@@ -14,7 +14,7 @@
 * npm install react-router-dom
 * or installation from package,json - npm install
 
-#### advantages of using styled-components
+#### Advantages of using styled-components
 * you can write css in javascript
 * styles for a component will never repeat themselves
 * you can define your own props

@@ -4,7 +4,7 @@ const Section = styled.div`
     flex-grow: 1;
     outline: 1px solid red;
     background: #ddd;
-    padding-bottom: 10px;
+    padding: 10px;
     background-color: ${props => props.theme.colors.gray.section}
 `
 
