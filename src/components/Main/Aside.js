@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-// import {Link} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 
 const AsideContainer = styled.div`
     min-width: 240px;
@@ -11,7 +11,7 @@ const List = styled.ul`
     list-style-type: none;
     border: 2px solid green;
 `
-const Link = styled.a`
+const LinkStyled = styled(NavLink)`
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -23,6 +23,10 @@ const Link = styled.a`
         transition: .5s;
         cursor: pointer;
     }
+    &.active {
+        background: #222;
+        color: #eee;
+    }
 `
 
 const Aside = ({items}) => {
@@ -32,9 +36,9 @@ const Aside = ({items}) => {
                 {
                 items.map(item => (
                     <li key={item.content}>
-                        <Link>
+                        <LinkStyled to={item.path}>
                         {item.content}
-                        </Link>
+                        </LinkStyled>
                     </li>
                 ))
                 }
